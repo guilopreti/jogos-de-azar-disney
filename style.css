@@ -1,13 +1,79 @@
-td {
-    border: 1px solid blue;
+
+body{
+    overflow: hidden;
+    background-color: #2D3561;
+    background-image: url(../img/);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
+
+/*CAÇA PALAVRAS*/
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.game td{
+    background-color: #C05C7E;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 1px;
+    height: 1px;
+    margin: 2px;
+    border: #fff;
+}
+#teste{
+    background-color:#C05C7E;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 td:hover {
-    background: orange;
+    background: #F3826F;
+}
+#joquempo{
+    background-color:#C05C7E;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px; 
+}
+button#joquempo:hover{
+    background: #F3826F;  
+}
+button#teste:hover{
+    background: #F3826F;  
+}
+h1{
+    color: #FFB961 ;
+    font-size: 42px;
+    margin-bottom: 50px; 
+}
+img{
+    width: 17.9em;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+h2{
+    color: #FFB961 ;
+    font-size: 42px;
+    margin-bottom: 50px; 
+    display: none;  
+}
+h3{
+    
 }
 
-table {
-    border: 1px solid green;
-    width: 500px;
-    height: 500px;
-}
+
