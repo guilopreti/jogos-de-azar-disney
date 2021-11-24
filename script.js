@@ -26,7 +26,7 @@ function getRandomInt3() { //função para gerar numeros randons para as letras 
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function caçapalavra(){
+
     let vinte = ["Ariel", "Mickey", "Cinderela", "Minnie", "Rapunzel", "Elsa", "Woody", "Pateta", "Cruella",
 "Pooh", "Sininho", "Fera", "Merida", "Olaf", "Simba", "Pluto", "Mufasa", "Tarzan", "Nemo", "Dory"]
 
@@ -519,4 +519,16 @@ function caçapalavra(){
     }
 
     console.table(caçaTabela)
+
+
+    let zeroCem = []
+    
+for(let i = 0; i < caçaTabela.length; i++){
+    for(let j = 0; j < caçaTabela[i].length; j++){
+        zeroCem.push(caçaTabela[i][j])
+    }
+}
+
+for(let i = 0; i < zeroCem.length; i++){
+    document.getElementById(`${i}`).innerText = zeroCem[i]
 }
