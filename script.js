@@ -1,10 +1,16 @@
 document.querySelector("#joquempo").addEventListener("click", function () {
     document.querySelector(".rockPaperScissors").style.display = "block";
     document.querySelector("#teste").style.display = "none";
+    document.querySelector("#escolhaJogo").style.display = "none";
+    document.querySelector("#jokenpo").style.display = "block";
+    document.querySelector("#joquempo").style.display = "none";
 });
 document.querySelector("#teste").addEventListener("click", function () {
     document.querySelector(".teste1").style.display = "block";
     document.querySelector("#joquempo").style.display = "none";
+    document.querySelector("#escolhaJogo").style.display = "none"
+    document.querySelector("#caçaPalavras").style.display = "block";
+    document.querySelector("#teste").style.display = "none";
 });
 //* PEDRA PAPEL TESOURA *//
 document.querySelector(".rockPaperScissors div").addEventListener("click", function(event) {
@@ -693,7 +699,7 @@ tabela.addEventListener("click", function(event){
         }
     } else{
         for(let i = 0; i < array.length; i++){
-            document.getElementById(`${array[i]}`).style.background = "transparent" //#C05C7E
+            document.getElementById(`${array[i]}`).style.background = "#C05C7E" 
         }
         array = []
         letraBloco = []
