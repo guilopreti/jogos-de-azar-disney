@@ -594,3 +594,110 @@ for(let i = 0; i < caçaTabela.length; i++){
 for(let i = 0; i < zeroCem.length; i++){
     document.getElementById(`${i}`).innerText = zeroCem[i]
 }
+
+let palavrasEscolhidas = []
+palavrasEscolhidas.push(vinte[numerosRandomsPalavras[0]].toUpperCase())
+palavrasEscolhidas.push(vinte[numerosRandomsPalavras[1]].toUpperCase())
+palavrasEscolhidas.push(vinte[numerosRandomsPalavras[2]].toUpperCase())
+
+console.log(palavrasEscolhidas)
+
+const tabela = document.getElementById("tabela")
+
+let array = []
+let letraBloco = []
+let venceu = []
+
+tabela.addEventListener("click", function(event){
+    console.log(event.target.id)
+    let quadradinNumero = event.target.id
+    let quadradin = event.target
+
+    array.push(quadradinNumero)
+    
+
+    if(array[0] === quadradinNumero){
+        letraBloco.push(event.target.innerText)
+        quadradin.style.background = "#F3826F"
+    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 10 === Number(array[array.length - 2])){
+        quadradin.style.background = "#F3826F"
+        letraBloco.push(event.target.innerText)
+        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(venceu.length === 3){
+            if(confirm("Você Venceu")){
+                window.location.reload()
+            }
+        }
+    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 10 === Number(array[array.length - 2])){
+        quadradin.style.background = "#F3826F"
+        letraBloco.push(event.target.innerText)
+        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(venceu.length === 3){
+            if(confirm("Você Venceu")){
+                window.location.reload()
+            }
+        }
+    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 1 === Number(array[array.length - 2])){
+        quadradin.style.background = "#F3826F"
+        letraBloco.push(event.target.innerText)
+        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(venceu.length === 3){
+            if(confirm("Você Venceu")){
+                window.location.reload()
+            }
+        }
+    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 1 === Number(array[array.length - 2])){
+        quadradin.style.background = "#F3826F"
+        letraBloco.push(event.target.innerText)
+        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+            venceu.push(letraBloco.join(""))
+            array = []
+            letraBloco = []
+        }
+        if(venceu.length === 3){
+            if(confirm("Você Venceu")){
+                window.location.reload()
+            }
+        }
+    } else{
+        for(let i = 0; i < array.length; i++){
+            document.getElementById(`${array[i]}`).style.background = "transparent" //#C05C7E
+        }
+        array = []
+        letraBloco = []
+    }
+    console.log(array)
+    console.log(letraBloco)
+})
