@@ -43,26 +43,26 @@ function ResultJoquempo(optionPlayer, optionComputer){
         switch(optionPlayer){
             case "pedra":
                 if(optionComputer === "papel"){
-                    return "Não foi dessa vez !!!";
+                    return "Você perdeu! Tente de novo!!";
                 }
                 else{
-                    return "Você esta com sorte !!";
+                    return "Você ganhou!!";
                 }
             break;
             case "papel":
                 if(optionComputer === "tesoura"){
-                    return "Não foi dessa vez !!!";
+                    return "Você perdeu! Tente de novo!!";
                 }
                 else{
-                    return "Você esta com sorte";
+                    return "Você ganhou!!";
                 }
             break;
             case "tesoura":
                 if(optionComputer === "pedra"){
-                    return "Não foi dessa vez !!!";
+                    return "Você perdeu! Tente de novo!!";
                 }
                 else{
-                    return "Você esta com sorte"
+                    return "Você ganhou!!"
                 }
             break;
         }
