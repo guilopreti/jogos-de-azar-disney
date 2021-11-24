@@ -1,12 +1,11 @@
 
 body{
+    width: 100%;
     overflow: hidden;
     background-color: #2D3561;
     background-image: url(../img/);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-size: cover;
 }
 
 
