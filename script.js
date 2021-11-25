@@ -78,25 +78,25 @@ function ResultJoquempo(optionPlayer, optionComputer){
 //CAÇA PALAVRA COMEÇA AQUI
 function getRandomInt() { //função para gerar numeros randons para escolher as 3 palavras
     let min = 0;
-    let  max = 19;
+    let  max = 20;
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function getRandomInt2() { //função para gerar numeros randons para escolher aonde as palavras vao ser alocadas
     let min = 0;
-    let  max = 9;
+    let  max = 10;
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function getRandomInt3() { //função para gerar numeros randons para as letras que vao completar o caça palavra
     let min = 0;
-    let  max = 25;
+    let  max = 26;
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
 
-    let vinte = ["Ariel", "Mickey", "Cinderela", "Minnie", "Rapunzel", "Elsa", "Woody", "Pateta", "Cruella",
-"Pooh", "Sininho", "Fera", "Merida", "Olaf", "Simba", "Pluto", "Mufasa", "Tarzan", "Nemo", "Dory"]
+    let vinte = ["Mickey", "Minnie", "Pluto", "Pateta", "Cinderela", "Ariel", "Rapunzel", "Merida", "Elsa", "Olaf", 
+    "Woody", "Cruella", "Pooh", "Sininho", "Fera", "Simba", "Mufasa", "Tarzan", "Nemo", "Dory"]
 
     let vinteLetras = []
     for(let i = 0; i < vinte.length; i++){ 
@@ -701,9 +701,9 @@ tabela.addEventListener("click", function(event){
         array.push(quadradinNumero)
         if(array[0] === quadradinNumero){
             letraBloco.push(event.target.innerText)
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 11 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -721,7 +721,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 11 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -739,7 +739,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 9 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -757,7 +757,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 9 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -775,7 +775,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 10 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -793,7 +793,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 10 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -811,7 +811,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 1 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -829,7 +829,7 @@ tabela.addEventListener("click", function(event){
                 }
             }
         } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 1 === Number(array[array.length - 2])){
-            quadradin.style.background = "#F3826F"
+            quadradin.style.backgroundColor = "#F3826F"
             letraBloco.push(event.target.innerText)
             if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
                 venceu.push(letraBloco.join(""))
@@ -848,13 +848,13 @@ tabela.addEventListener("click", function(event){
             }
         } else if(array[array.length - 1] === array[array.length - 2]){
             for(let i = 0; i < array.length; i++){
-                document.getElementById(`${array[i]}`).style.background = "#C05C7E"
+                document.getElementById(`${array[i]}`).style.backgroundColor = "#C05C7E"
             }
             array = []
             letraBloco = []
         } else{
             for(let i = 0; i < array.length; i++){
-                document.getElementById(`${array[i]}`).style.background = "#C05C7E"
+                document.getElementById(`${array[i]}`).style.backgroundColor = "#C05C7E"
             }
             array = []
             letraBloco = []
@@ -863,3 +863,11 @@ tabela.addEventListener("click", function(event){
     console.log(array)
     console.log(letraBloco)
 })
+
+let dicas = document.getElementById("dica")
+dicas.innerHTML = `Os três personagens podem ser: ${vinte[0].toUpperCase()}, ${vinte[1].toUpperCase()}, ${vinte[2].toUpperCase()}, 
+${vinte[3].toUpperCase()}, ${vinte[4].toUpperCase()}, ${vinte[5].toUpperCase()}, ${vinte[6].toUpperCase()}, ${vinte[7].toUpperCase()}, 
+${vinte[8].toUpperCase()}, ${vinte[9].toUpperCase()}, ${vinte[10].toUpperCase()}, ${vinte[11].toUpperCase()}, ${vinte[12].toUpperCase()}, 
+${vinte[13].toUpperCase()}, ${vinte[14].toUpperCase()}, ${vinte[15].toUpperCase()}, ${vinte[16].toUpperCase()}, ${vinte[17].toUpperCase()}, 
+${vinte[18].toUpperCase()}, ${vinte[19].toUpperCase()}.`
+
