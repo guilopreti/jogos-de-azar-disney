@@ -11,7 +11,8 @@ body{
 }
 ul{
     background-color: #2D3561;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 ul li{
     font-family: 'Russo One';
@@ -23,9 +24,11 @@ ul li{
 /*CAÇA PALAVRAS*/
 td {
     border: 1px solid blue;
+    color: white;
 }
 
 .game td{
+    display: flex;
     background-color: #C05C7E;
     justify-content: center;
     align-items: center;
