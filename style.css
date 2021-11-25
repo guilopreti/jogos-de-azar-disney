@@ -9,6 +9,16 @@ body{
     background-position-y: -252%;
     background-size: cover;
 }
+ul{
+    background-color: #2D3561;
+    margin-bottom: 50px;
+}
+ul li{
+    font-family: 'Russo One';
+    color: #FFB961;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
 
 /*CAÇA PALAVRAS*/
 td {
@@ -409,6 +419,9 @@ header button {
         width: 160px;
         height: 130px;
         margin: 1.5em 1em 1em 1em;
+    }
+    ul{
+        background-color: transparent;
     }
    
 
