@@ -14,7 +14,7 @@ document.querySelector("#teste").addEventListener("click", function () {
 });
 //* PEDRA PAPEL TESOURA *//
 document.querySelector(".rockPaperScissors div").addEventListener("click", function(event) {
-    if(event.target.tagName === "IMG" || event.target.tagName === "FIGCAPTION"){
+    if(event.target.tagName === "FIGCAPTION"){
         const options = document.querySelectorAll(".rockPaperScissors figure");
         let optionPlayer = event.path[1].cloneNode(true);
         let optionComputer = options[parseInt(Math.random() * (3))].cloneNode(true);
@@ -362,14 +362,59 @@ function getRandomInt3() { //função para gerar numeros randons para as letras 
         vazio = ""
         checagemDeCasas = []
         for(let i = 0; i < escolhidas[1].length; i++){
-            checagemDeCasas.push(caçaTabela[0][0 + i])
+            checagemDeCasas.push(caçaTabela[9 - i][8 - i])
             for(let j = 0; j < checagemDeCasas.length; j++){
                 vazio += checagemDeCasas[j]
             }
         }
         for(let i = 0; i < escolhidas[1].length; i++){
             if(vazio === ""){
-                caçaTabela[0][0 + i] = escolhidas[1][i]
+                caçaTabela[9 - i][8 - i] = escolhidas[1][i]
+            }
+        }
+    } 
+    if(vazio !== ""){
+        vazio = ""
+        checagemDeCasas = []
+        for(let i = 0; i < escolhidas[1].length; i++){
+            checagemDeCasas.push(caçaTabela[9 - i][1 + i])
+            for(let j = 0; j < checagemDeCasas.length; j++){
+                vazio += checagemDeCasas[j]
+            }
+        }
+        for(let i = 0; i < escolhidas[1].length; i++){
+            if(vazio === ""){
+                caçaTabela[9 - i][1 + i] = escolhidas[1][i]
+            }
+        }
+    } 
+    if(vazio !== ""){
+        vazio = ""
+        checagemDeCasas = []
+        for(let i = 0; i < escolhidas[1].length; i++){
+            checagemDeCasas.push(caçaTabela[0 + i][1 + i])
+            for(let j = 0; j < checagemDeCasas.length; j++){
+                vazio += checagemDeCasas[j]
+            }
+        }
+        for(let i = 0; i < escolhidas[1].length; i++){
+            if(vazio === ""){
+                caçaTabela[0 + i][1 + i] = escolhidas[1][i]
+            }
+        }
+    } 
+    if(vazio !== ""){
+        vazio = ""
+        checagemDeCasas = []
+        for(let i = 0; i < escolhidas[1].length; i++){
+            checagemDeCasas.push(caçaTabela[0 + i][8 - i])
+            for(let j = 0; j < checagemDeCasas.length; j++){
+                vazio += checagemDeCasas[j]
+            }
+        }
+        for(let i = 0; i < escolhidas[1].length; i++){
+            if(vazio === ""){
+                caçaTabela[0 + i][8 - i] = escolhidas[1][i]
             }
         }
     } 
@@ -385,6 +430,36 @@ function getRandomInt3() { //função para gerar numeros randons para as letras 
         for(let i = 0; i < escolhidas[1].length; i++){
             if(vazio === ""){
                 caçaTabela[9 - i][0] = escolhidas[1][i]
+            }
+        }
+    }
+    if(vazio !== ""){
+        vazio = ""
+        checagemDeCasas = []
+        for(let i = 0; i < escolhidas[1].length; i++){
+            checagemDeCasas.push(caçaTabela[9][9 - i])
+            for(let j = 0; j < checagemDeCasas.length; j++){
+                vazio += checagemDeCasas[j]
+            }
+        }
+        for(let i = 0; i < escolhidas[1].length; i++){
+            if(vazio === ""){
+                caçaTabela[9][9 - i] = escolhidas[1][i]
+            }
+        }
+    }
+    if(vazio !== ""){
+        vazio = ""
+        checagemDeCasas = []
+        for(let i = 0; i < escolhidas[1].length; i++){
+            checagemDeCasas.push(caçaTabela[0 + i][9])
+            for(let j = 0; j < checagemDeCasas.length; j++){
+                vazio += checagemDeCasas[j]
+            }
+        }
+        for(let i = 0; i < escolhidas[1].length; i++){
+            if(vazio === ""){
+                caçaTabela[0 + i][9] = escolhidas[1][i]
             }
         }
     }
@@ -512,21 +587,7 @@ function getRandomInt3() { //função para gerar numeros randons para as letras 
 
     console.log(vazioDois)
 
-    if(vazioDois !== ""){
-        vazioDois = ""
-        checagemDeCasasDois = []
-        for(let i = 0; i < escolhidas[2].length; i++){
-            checagemDeCasasDois.push(caçaTabela[0][0 + i])
-            for(let j = 0; j < checagemDeCasasDois.length; j++){
-                vazioDois += checagemDeCasasDois[j]
-            }
-        }
-        for(let i = 0; i < escolhidas[2].length; i++){
-            if(vazioDois === ""){
-                caçaTabela[0][0 + i] = escolhidas[2][i]
-            }
-        }
-    } 
+    
     if(vazioDois !== ""){
         vazioDois = ""
         checagemDeCasasDois = []
@@ -572,6 +633,21 @@ function getRandomInt3() { //função para gerar numeros randons para as letras 
             }
         }
     }
+    if(vazioDois !== ""){
+        vazioDois = ""
+        checagemDeCasasDois = []
+        for(let i = 0; i < escolhidas[2].length; i++){
+            checagemDeCasasDois.push(caçaTabela[0][0 + i])
+            for(let j = 0; j < checagemDeCasasDois.length; j++){
+                vazioDois += checagemDeCasasDois[j]
+            }
+        }
+        for(let i = 0; i < escolhidas[2].length; i++){
+            if(vazioDois === ""){
+                caçaTabela[0][0 + i] = escolhidas[2][i]
+            }
+        }
+    } 
     
     let letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", 
     "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -618,91 +694,171 @@ tabela.addEventListener("click", function(event){
     console.log(event.target.id)
     let quadradinNumero = event.target.id
     let quadradin = event.target
-
-    array.push(quadradinNumero)
+    console.log(event.target.tagName)
     
-
-    if(array[0] === quadradinNumero){
-        letraBloco.push(event.target.innerText)
-        quadradin.style.background = "#F3826F"
-    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 10 === Number(array[array.length - 2])){
-        quadradin.style.background = "#F3826F"
-        letraBloco.push(event.target.innerText)
-        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(venceu.length === 3){
-            if(confirm("Você Venceu")){
-                window.location.reload()
+    
+    if(event.target.tagName === "TD"){
+        array.push(quadradinNumero)
+        if(array[0] === quadradinNumero){
+            letraBloco.push(event.target.innerText)
+            quadradin.style.background = "#F3826F"
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 11 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
             }
-        }
-    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 10 === Number(array[array.length - 2])){
-        quadradin.style.background = "#F3826F"
-        letraBloco.push(event.target.innerText)
-        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(venceu.length === 3){
-            if(confirm("Você Venceu")){
-                window.location.reload()
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
             }
-        }
-    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 1 === Number(array[array.length - 2])){
-        quadradin.style.background = "#F3826F"
-        letraBloco.push(event.target.innerText)
-        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(venceu.length === 3){
-            if(confirm("Você Venceu")){
-                window.location.reload()
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
             }
-        }
-    } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 1 === Number(array[array.length - 2])){
-        quadradin.style.background = "#F3826F"
-        letraBloco.push(event.target.innerText)
-        if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
-            venceu.push(letraBloco.join(""))
-            array = []
-            letraBloco = []
-        }
-        if(venceu.length === 3){
-            if(confirm("Você Venceu")){
-                window.location.reload()
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 11 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
             }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 9 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 9 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 10 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 10 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) + 1 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[0] !== quadradinNumero && Number(array[array.length - 1]) - 1 === Number(array[array.length - 2])){
+            quadradin.style.background = "#F3826F"
+            letraBloco.push(event.target.innerText)
+            if(letraBloco.join("") === palavrasEscolhidas[0] || letraBloco.join("") === palavrasEscolhidas[1] || letraBloco.join("") === palavrasEscolhidas[2]){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(letraBloco.join("") === palavrasEscolhidas[0].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[1].split("").reverse().join("") || letraBloco.join("") === palavrasEscolhidas[2].split("").reverse().join("")){
+                venceu.push(letraBloco.join(""))
+                array = []
+                letraBloco = []
+            }
+            if(venceu.length === 3){
+                if(confirm("Você Venceu")){
+                    window.location.reload()
+                }
+            }
+        } else if(array[array.length - 1] === array[array.length - 2]){
+            for(let i = 0; i < array.length; i++){
+                document.getElementById(`${array[i]}`).style.background = "#C05C7E"
+            }
+            array = []
+            letraBloco = []
+        } else{
+            for(let i = 0; i < array.length; i++){
+                document.getElementById(`${array[i]}`).style.background = "#C05C7E"
+            }
+            array = []
+            letraBloco = []
         }
-    } else{
-        for(let i = 0; i < array.length; i++){
-            document.getElementById(`${array[i]}`).style.background = "#C05C7E" 
-        }
-        array = []
-        letraBloco = []
     }
     console.log(array)
     console.log(letraBloco)
