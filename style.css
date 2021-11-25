@@ -1,0 +1,527 @@
+
+body{
+    width: 100%;
+    overflow: hidden;
+    background-color: #2D3561;
+    background-image: url(img/Personagens-da-Disney-Toy-Story-PNG.png);
+    background-repeat: no-repeat;
+    background-position-x: 25%;
+    background-position-y: -252%;
+    background-size: cover;
+}
+ul{
+    background-color: #2D3561;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+ul li{
+    font-family: 'Russo One';
+    color: #FFB961;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/*CAÇA PALAVRAS*/
+td {
+    border: 1px solid blue;
+    color: white;
+}
+
+.game td{
+    display: flex;
+    background-color: #C05C7E;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 1px;
+    height: 1px;
+    margin: 2px;
+    border: #fff;
+}
+#teste{
+    background-color:#C05C7E;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+td:hover {
+    background: #F3826F;
+}
+#joquempo{
+    background-color:#C05C7E;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px; 
+}
+button#joquempo:hover{
+    background: #F3826F;  
+}
+button#teste:hover{
+    background: #F3826F;  
+}
+h1{
+    color: #FFB961 ;
+    font-size: 42px;
+    margin-bottom: 50px; 
+    font-family: 'Russo One';
+}
+img{
+    width: 17.9em;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+h2{
+    color: #FFB961 ;
+    font-size: 42px;
+    margin-bottom: 50px; 
+    display: none;  
+    font-family: 'Russo One';
+}
+h3{
+    font-family: 'Russo One';
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.linha{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#caçaPalavras{
+    margin: 0;
+}
+#jokenpo{
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+header button {
+    padding: 10px 25px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgb(0, 0, 0);
+    color: #FFB961;
+    cursor: pointer;
+    font-family: 'Russo One';
+}
+
+.result {
+    display: none;
+    background-color: rgb(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.display--flex {
+    display: flex;
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.result section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background-color: #2D3561;
+    overflow: auto;
+}
+
+.result section h3 {
+    font-size: 25px;
+    margin: 30px 0;
+    color: white;
+}
+
+.result section figure:last-child img {
+    transform: scaleX(-1);
+}
+
+.result button {
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 15px 0px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rockPaperScissors, .teste1 {
+    display: none;
+    overflow: hidden;
+}
+
+.rockPaperScissors h1, .teste1 h1 {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.rockPaperScissors .game, .teste1 .teste1--game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rockPaperScissors div figure {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rockPaperScissors div figcaption:hover {
+    background-color: rgb(189, 189, 189);
+}
+
+.rockPaperScissors div figure {
+    width: 170px;
+    height: 190px;
+    border-radius: 40px;
+    background-color: #C05C7E;
+    margin: 10px;
+}
+
+.oval {
+    width: 150px;
+    height: 130px;
+    border-radius: 40px;
+    opacity: 100%;
+    background-color: #F3826F;
+    margin-left: 0.5em;
+
+}
+
+.choose {
+    display: flex;
+    font-size: 23px;
+    font-family: 'Russo One';
+    color: white;
+    justify-content: center;
+    padding-top: 0.7em;
+
+}
+
+
+
+.rockPaperScissors div figcaption {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0.5em;
+    font-family: 'Russo One';
+    color: white;
+    font-weight: 400;
+    background-color: #C05C7E;
+    border-radius: 15px;
+}
+
+.rockPaperScissors div img {
+    width: 120px;
+    height: 90px;
+    margin: 1.5em 1em 1em 1em;
+    padding-top: 29px;
+}
+
+.hh3{
+    font-family: 'Russo One';
+}
+
+.butao{
+    color: white;
+}
+
+h1 {
+    color: #FFB961;
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Russo One';
+}
+
+.choose {
+    display: flex;
+    font-size: 23px;
+    font-family: 'Russo One';
+    color: white;
+    justify-content: center;
+    padding-top: 0.7em;
+}
+
+h2 {
+    color: #FFB961;
+    font-size: max(50px,4vw);
+    display: none;
+    font-family: 'Russo One';
+    font-weight: 400;
+}
+@media (min-width: 700px) {
+
+    .pedra{
+        
+    }
+    main {
+        height: 100vh;
+        padding: 20px;
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    body {
+        overflow: hidden;
+        background-color: #2D3561;
+        background-position-x: 212%;
+        background-position-y: -5%;
+        background-size: 75%;
+    }
+
+    .rockPaperScissors div figure {
+        width: 190px;
+        height: 240px;
+        border-radius: 40px;
+        background-color: #C05C7E;
+        margin: 10px;
+    }
+
+    .rockPaperScissors div figcaption {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 0.6em;
+        font-family: 'Russo One';
+        color: white;
+        font-weight: 400;
+        background-color: #C05C7E;
+        border-radius: 15px;
+    }
+
+    .choose {
+        display: flex;
+        font-size: 28px;
+        font-family: 'Russo One';
+        color: white;
+        justify-content: center;
+        padding-top: 0.7em;
+    }
+
+    .oval {
+        width: 170px;
+        height: 140px;
+        border-radius: 40px;
+        opacity: 100%;
+        background-color: #F3826F;
+    }
+
+    .rockPaperScissors div img {
+        width: 120px;
+        height: 90px;
+        margin: 1.5em 1em 1em 2em;
+        padding-top: 29px;
+        
+    }
+
+
+
+    .rockPaperScissors, .teste1 {
+        width: 650px;
+        margin: 0 auto;
+    }
+
+    .rockPaperScissors .game {
+        flex-direction: row;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .result section div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header button {
+        font-size: 25px;
+    }
+
+    .result section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        background-color: #2D3561;
+        box-shadow: 3px 3px 4px 3px rgb(0 0 0 / 70%);
+        overflow: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+
+
+    .rockPaperScissors, .teste1 {
+        width: 900px;
+    }
+
+    .rockPaperScissors h1, .teste1 h1 {
+        font-size: 40px;
+    }
+
+    .rockPaperScissors .game, .teste1 .teste1--game {
+        height: 400px;
+    }
+
+    .rockPaperScissors div figure {
+        width: 235px;
+        height: 300px;
+        border-radius: 40px;
+        background-color: #C05C7E;
+    }
+
+    .rockPaperScissors div figcaption {
+        font-size: 42px;
+        font-family: 'Russo One';
+        color: white;
+        padding-top: 0.1em;
+        font-weight: 400;
+        background-color: #C05C7E;
+        border-radius: 15px;
+    }
+
+    .result section h3 {
+        font-size: 35px;
+    }
+
+    .oval {
+        width: 200px;
+        height: 180px;
+        border-radius: 40px;
+        opacity: 100%;
+        background-color: #F3826F;
+        margin-left: 1em;
+    }
+
+    .choose {
+        display: flex;
+        font-size: 43px;
+        font-family: 'Russo One';
+        color: white;
+        justify-content: center;
+        padding-top: 0.7em;
+
+    }
+
+    .teste {
+        width: 400px;
+        height: 300px;
+    }
+
+    .rockPaperScissors div img {
+        width: 160px;
+        height: 130px;
+        margin: 1.5em 1em 1em 1em;
+        padding-top: 29px;
+    }
+    ul{
+        background-color: transparent;
+    }
+   
+    td {
+        border: 1px solid blue;
+    }
+    
+    .game td{
+        background-color: #C05C7E;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 1px;
+        height: 1px;
+        margin: 2px;
+        border: #fff;
+    }
+    #teste{
+        background-color:#C05C7E;
+        width: 300px;
+        height: 70px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-family: 'Russo One';
+        font-weight: 400;
+    }
+    td:hover {
+        background: #F3826F;
+    }
+    #joquempo{
+        background-color:#C05C7E;
+        width: 300px;
+        height: 70px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-family: 'Russo One';
+        font-weight: 400; 
+    }
+    button#joquempo:hover{
+        background: #F3826F;  
+    }
+    button#teste:hover{
+        background: #F3826F;  
+    }
+    
+    img{
+        width: 17.9em;
+        height: auto;
+        align-items: center;
+    }
+    h2{
+        color: #FFB961 ;
+        font-size: max(42px,4vw);
+        display: none;
+        font-family: 'Russo One';
+        font-weight: 400;  
+    }
+    h3{
+        
+    }    
+
+}
+
+
+
+
+
+
