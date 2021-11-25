@@ -23,7 +23,6 @@ body{
 }
 
 main {
-    width: 100%;
     height: 100vh;
     padding: 20px;
     margin: 0 auto;
@@ -146,6 +145,7 @@ header button {
     border-radius: 40px;
     opacity: 100%;
     background-color: #F3826F;
+    margin-left: 0.5em;
 
 }
 
@@ -185,10 +185,39 @@ header button {
     color: white;
 }
 
+h1 {
+    color: #FFB961;
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Russo One';
+}
+
+.choose {
+    display: flex;
+    font-size: 23px;
+    font-family: 'Russo One';
+    color: white;
+    justify-content: center;
+    padding-top: 0.7em;
+}
+
+h2 {
+    color: #FFB961;
+    font-size: max(50px,4vw);
+    display: none;
+    font-family: 'Russo One';
+    font-weight: 400;
+}
 @media (min-width: 700px) {
 
     .pedra{
         
+    }
+    main {
+        height: 100vh;
+        padding: 20px;
+        margin: 0 auto;
+        overflow: auto;
     }
 
     body {
@@ -312,7 +341,7 @@ header button {
         border-radius: 40px;
         opacity: 100%;
         background-color: #F3826F;
-        margin-left: 0.5em;
+        margin-left: 1em;
     }
 
     .choose {
@@ -359,6 +388,8 @@ td {
     height: 70px;
     border-radius: 10px;
     margin-bottom: 15px;
+    font-family: 'Russo One';
+    font-weight: 400;
 }
 td:hover {
     background: #F3826F;
@@ -368,7 +399,9 @@ td:hover {
     width: 300px;
     height: 70px;
     border-radius: 10px;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    font-family: 'Russo One';
+    font-weight: 400; 
 }
 button#joquempo:hover{
     background: #F3826F;  
@@ -376,25 +409,23 @@ button#joquempo:hover{
 button#teste:hover{
     background: #F3826F;  
 }
-h1{
-    color: #FFB961 ;
-    font-size: 42px;
-    margin-bottom: 50px; 
-}
+
 img{
     width: 17.9em;
     height: auto;
-    display: flex;
     align-items: center;
 }
 h2{
     color: #FFB961 ;
-    font-size: 42px;
-    margin-bottom: 50px; 
-    display: none;  
+    font-size: max(42px,4vw);
+    display: none;
+    font-family: 'Russo One';
+    font-weight: 400;  
 }
 h3{
     
 }
+
+
 
 
