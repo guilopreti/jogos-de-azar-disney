@@ -32,7 +32,7 @@ td {
     background-color: #C05C7E;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 13px;
     width: 1px;
     height: 1px;
     margin: 2px;
@@ -290,6 +290,13 @@ h2 {
     font-family: 'Russo One';
     font-weight: 400;
 }
+
+@media (min-width: 500px) {
+    .game td{
+        padding: 20px;
+    }
+}
+
 @media (min-width: 700px) {
 
     .pedra{
