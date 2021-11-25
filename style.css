@@ -146,6 +146,28 @@ header button {
     right: 0;
     bottom: 0;
 }
+.buttonVoltar {
+    position: relative;
+    left: 270px;
+    width: 108px;
+    height: 38px;
+    background-color: #C05C7E;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Russo One';
+}
+.buttonDiv{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position: relative;
+    right: 272px;
+}
+.voltar{
+    text-decoration: none;
+    color: #ffffff;
+}
+    
 
 .result section {
     display: flex;
@@ -329,6 +351,23 @@ h2 {
         background-color: #F3826F;
         border-radius: 15px;
     }
+    .buttonVoltar {
+        position: relative;
+        left: 21em;
+        width: 108px;
+        height: 38px;
+        background-color: #C05C7E;
+        border-radius: 15px;
+        border: none;
+        font-family: 'Russo One';
+    }
+    .buttonDiv{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        position: relative;
+        right: 272px;
+    }
 
     .choose {
         display: flex;
@@ -421,6 +460,13 @@ h2 {
         background-color: #F3826F;
         border-radius: 15px;
     }
+    /* .buttonVoltar{
+        position: relative;
+        left: 30em;
+        width: 108px;
+        height: 38px;
+    } */
+
 
     .result section h3 {
         font-size: 35px;
