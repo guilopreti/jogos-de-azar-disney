@@ -3,13 +3,73 @@ body{
     width: 100%;
     overflow: hidden;
     background-color: #2D3561;
-    background-image: url(../img/);
-    background-position: center;
+    background-image: url(/img/Personagens-da-Disney-Toy-Story-PNG.png);
+    background-repeat: no-repeat;
+    background-position-x: 25%;
+    background-position-y: -252%;
     background-size: cover;
 }
 
-
 /*CAÇA PALAVRAS*/
+td {
+    border: 1px solid blue;
+}
+
+.game td{
+    background-color: #C05C7E;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 1px;
+    height: 1px;
+    margin: 2px;
+    border: #fff;
+}
+#teste{
+    background-color:#C05C7E;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+td:hover {
+    background: #F3826F;
+}
+#joquempo{
+    background-color:#C05C7E;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px; 
+}
+button#joquempo:hover{
+    background: #F3826F;  
+}
+button#teste:hover{
+    background: #F3826F;  
+}
+h1{
+    color: #FFB961 ;
+    font-size: 42px;
+    margin-bottom: 50px; 
+    font-family: 'Russo One';
+}
+img{
+    width: 17.9em;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+h2{
+    color: #FFB961 ;
+    font-size: 42px;
+    margin-bottom: 50px; 
+    display: none;  
+    font-family: 'Russo One';
+}
+h3{
+    font-family: 'Russo One';
+}
 .game{
     display: flex;
     flex-direction: column;
@@ -17,8 +77,15 @@ body{
 }
 .linha{
     display: flex;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+#caçaPalavras{
+    margin: 0;
+}
+#jokenpo{
+    margin: 0;
 }
 
 main {
@@ -45,8 +112,9 @@ header button {
     font-weight: bold;
     text-transform: uppercase;
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    color: #FFB961;
     cursor: pointer;
+    font-family: 'Russo One';
 }
 
 .result {
@@ -73,7 +141,6 @@ header button {
     align-items: center;
     width: 80%;
     background-color: #2D3561;
-    box-shadow: 3px 3px 4px 3px rgb(0, 0, 0, 0.7);
     overflow: auto;
 }
 
@@ -127,7 +194,7 @@ header button {
     cursor: pointer;
 }
 
-.rockPaperScissors div figure:hover {
+.rockPaperScissors div figcaption:hover {
     background-color: rgb(189, 189, 189);
 }
 
@@ -164,10 +231,12 @@ header button {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 0.7em;
+    margin-top: 0.5em;
     font-family: 'Russo One';
     color: white;
     font-weight: 400;
+    background-color: #C05C7E;
+    border-radius: 15px;
 }
 
 .rockPaperScissors div img {
@@ -193,6 +262,9 @@ header button {
     body {
         overflow: hidden;
         background-color: #2D3561;
+        background-position-x: 212%;
+        background-position-y: -5%;
+        background-size: 75%;
     }
 
     .rockPaperScissors div figure {
@@ -211,6 +283,8 @@ header button {
         font-family: 'Russo One';
         color: white;
         font-weight: 400;
+        background-color: #C05C7E;
+        border-radius: 15px;
     }
 
     .choose {
@@ -297,8 +371,10 @@ header button {
         font-size: 42px;
         font-family: 'Russo One';
         color: white;
-        padding-top: 0.2em;
+        padding-top: 0.1em;
         font-weight: 400;
+        background-color: #C05C7E;
+        border-radius: 15px;
     }
 
     .result section h3 {
@@ -334,66 +410,7 @@ header button {
         height: 130px;
         margin: 1.5em 1em 1em 1em;
     }
+   
 
-
 }
-
-td {
-    border: 1px solid blue;
-}
-
-.game td{
-    background-color: #C05C7E;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 1px;
-    height: 1px;
-    margin: 2px;
-    border: #fff;
-}
-#teste{
-    background-color:#C05C7E;
-    width: 300px;
-    height: 70px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-td:hover {
-    background: #F3826F;
-}
-#joquempo{
-    background-color:#C05C7E;
-    width: 300px;
-    height: 70px;
-    border-radius: 10px;
-    margin-bottom: 15px; 
-}
-button#joquempo:hover{
-    background: #F3826F;  
-}
-button#teste:hover{
-    background: #F3826F;  
-}
-h1{
-    color: #FFB961 ;
-    font-size: 42px;
-    margin-bottom: 50px; 
-}
-img{
-    width: 17.9em;
-    height: auto;
-    display: flex;
-    align-items: center;
-}
-h2{
-    color: #FFB961 ;
-    font-size: 42px;
-    margin-bottom: 50px; 
-    display: none;  
-}
-h3{
-    
-}
-
 
